@@ -1,3 +1,5 @@
+package management;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 
@@ -8,12 +10,10 @@ public class ConnectionToDb {
         Connection connection = null;
         try{
             Class.forName("org.postgresql.Driver");
-            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Database of something",userName, password);
-
-
             //"jdbc:postgresql://localhost:5432/Database of something"
             // tcp://0.tcp.eu.ngrok.io:19584
-            /*   if(connection!=null){
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Database of something",userName, password);
+         /*   if(connection!=null){
                 System.out.println("Connection to server Established");
             }
             else{
